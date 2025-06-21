@@ -1,0 +1,34 @@
+#include "DigiKeyboard.h"
+
+void setup() {
+  // No setup needed
+}
+
+void loop() {
+  for (int i = 0; i < 10; i++) {
+    DigiKeyboard.sendKeyStroke(0); // Wake system
+    DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT); // Win + R
+    DigiKeyboard.delay(5000);
+
+    DigiKeyboard.print("cmd");
+    DigiKeyboard.delay(5000);
+    DigiKeyboard.sendKeyStroke(KEY_ENTER);
+    DigiKeyboard.delay(5000);
+
+    // Change CMD text color to green
+    DigiKeyboard.print("color a");
+    DigiKeyboard.delay(5000);
+    DigiKeyboard.sendKeyStroke(KEY_ENTER);
+    DigiKeyboard.delay(5000);
+
+    // Run ipconfig
+    DigiKeyboard.print("ipconfig");
+    DigiKeyboard.delay(5000);
+    DigiKeyboard.sendKeyStroke(KEY_ENTER);
+    DigiKeyboard.delay(5000);
+  }
+
+  for(;;) {
+    // End loop
+  }
+}

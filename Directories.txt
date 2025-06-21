@@ -1,0 +1,31 @@
+#include "DigiKeyboard.h"
+
+void setup() {
+  // No setup needed
+}
+
+void loop() {
+  DigiKeyboard.sendKeyStroke(0); // Wake system
+  DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT); // Win + R
+  DigiKeyboard.delay(5000);
+
+  DigiKeyboard.print("cmd");
+  DigiKeyboard.delay(5000);
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(5000);
+
+  // Set green text
+  DigiKeyboard.print("color a");
+  DigiKeyboard.delay(5000);
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(5000);
+
+  // Run dir /s
+  DigiKeyboard.print("dir /s");
+  DigiKeyboard.delay(5000);
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+
+  for(;;) {
+    // Stop here
+  }
+}

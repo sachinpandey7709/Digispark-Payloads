@@ -1,0 +1,27 @@
+#include "DigiKeyboard.h"
+
+void setup() {
+  // No setup needed
+}
+
+void loop() {
+  // Wake system and open Run dialog
+  DigiKeyboard.sendKeyStroke(0);
+  DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT); // Win + R
+  DigiKeyboard.delay(5000);
+
+  // Type and open CMD
+  DigiKeyboard.print("cmd");
+  DigiKeyboard.delay(5000);
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(5000);
+
+  // Type start command with YouTube URL
+  DigiKeyboard.print("start https://youtu.be/-CcT26-3QA4?si=4XZoP6tgzfTe3Dzn");
+  DigiKeyboard.delay(5000);
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+
+  for(;;) {
+    // Stop loop
+  }
+}

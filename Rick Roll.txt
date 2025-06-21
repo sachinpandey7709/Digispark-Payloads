@@ -1,0 +1,30 @@
+#include "DigiKeyboard.h"
+
+void setup() {
+  // Start prank
+}
+
+void loop() {
+  DigiKeyboard.sendKeyStroke(0); // Wake system
+  DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT); // Win + R
+  DigiKeyboard.delay(5000);
+
+  // Open CMD
+  DigiKeyboard.print("cmd");
+  DigiKeyboard.delay(5000);
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(5000);
+
+  // Start Rickroll in Firefox
+  DigiKeyboard.print("start firefox https://youtu.be/dQw4w9WgXcQ");
+  DigiKeyboard.delay(5000);
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(10000); // Wait for video to load
+
+  // Send F11 to make it fullscreen
+  DigiKeyboard.sendKeyStroke(KEY_F11);
+
+  for(;;) {
+    // Stop loop
+  }
+}

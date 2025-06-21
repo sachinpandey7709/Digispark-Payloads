@@ -1,0 +1,23 @@
+#include "DigiKeyboard.h"
+
+void setup() {
+  // Start payload
+}
+
+void loop() {
+  DigiKeyboard.sendKeyStroke(0); // Wake system
+  DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT); // Win + R
+  DigiKeyboard.delay(5000);
+
+  DigiKeyboard.print("firefox https://geekprank.com/win10-update/");
+  DigiKeyboard.delay(5000);
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(10000); // Wait for Firefox to fully open
+
+  // Press F11 to enter fullscreen mode
+  DigiKeyboard.sendKeyStroke(KEY_F11);
+  
+  for(;;) {
+    // End loop
+  }
+}

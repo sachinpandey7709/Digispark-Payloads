@@ -1,0 +1,29 @@
+#include "DigiKeyboard.h"
+
+void setup() {
+  // No setup needed for DigiKeyboard
+}
+
+void loop() {
+  // Prevent missing the first character
+  DigiKeyboard.sendKeyStroke(0);
+  DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT); // Win + R
+  DigiKeyboard.delay(5000); // Wait for Run dialog
+
+  // Open Notepad
+  DigiKeyboard.print("notepad");
+  DigiKeyboard.delay(5000); // Wait before Enter
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(5000); // Wait for Notepad to open
+
+  // Type first line
+  DigiKeyboard.println("Subscribe Sachin Autocad Youtube channel for more cyber security videos");
+  DigiKeyboard.delay(5000); // Wait before second line
+
+  // Type second line
+  DigiKeyboard.println("Like aur Share karna mat bhuliyega");
+
+  for(;;) {
+    // Stop loop
+  }
+}
