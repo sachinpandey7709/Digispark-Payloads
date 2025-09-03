@@ -24,6 +24,7 @@ The author is **not responsible** for any misuse. Please use them **only on syst
 - In Additional Board Manager URLs, add:
 ```bash
 http://digistump.com/package_digistump_index.json
+https://drazzy.com/package_drazzy.com_index.json
 ```
 - Go to Tools → Board → Boards Manager and install Digistump AVR Boards
 - Connect Digispark
