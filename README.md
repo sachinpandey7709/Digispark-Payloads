@@ -17,11 +17,23 @@ The author is **not responsible** for any misuse. Please use them **only on syst
 - Digispark drivers installed
 - Basic knowledge of Arduino programming
 
+##  Install Arduino IDE
+- Download from Arduino official website
+- Add Digispark Board to Arduino IDE
+- Open File → Preferences
+- In Additional Board Manager URLs, add:
+```bash
+http://digistump.com/package_digistump_index.json
+```
+- Go to Tools → Board → Boards Manager and install Digistump AVR Boards
+- Connect Digispark
+- Select board:
+- Board: Digispark (Default - 16.5 MHz)
 ---
 
 ## 🔧 Installation
 
 1. **Clone this repository**
    ```bash
-   git clone https://github.com/<your-username>/digispark-payloads.git
-   cd digispark-payloads
+   git clone https://github.com/sachinpandey7709/Digispark-Payloads.git
+   cd Digispark-Payloads
